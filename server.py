@@ -18,11 +18,13 @@ def token():
 
   # This allows outgoing connections to application
   if request.values.get('allowOutgoing') != 'false':
+     print 1
      capability.allow_client_outgoing(APP_SID)
 
   # This allows incoming connections to client (if specified)
   client = request.values.get('client')
   if client != None:
+    print 2
     capability.allow_client_incoming(client)
 
   # This returns a token to use with Twilio based on the account and capabilities defined above
