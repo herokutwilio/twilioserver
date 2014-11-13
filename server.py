@@ -41,6 +41,7 @@ def call():
   from_client = request.values.get('From').startswith('client')
   from_value = request.values.get('From')
   to = request.values.get('To')
+  resp.say('10 9 8 7 6 5 4 3 2 1 0 Big brother watching you!')
   if not from_client:
     # PSTN -> client
     print 1
