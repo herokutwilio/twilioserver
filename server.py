@@ -2,10 +2,14 @@ from flask import Flask, request
 from twilio.util import TwilioCapability
 import twilio.twiml
 
-ACCOUNT_SID = 'AC399ea9c308d1cc32573baac7336d0754'
-AUTH_TOKEN = '3b4a61f0def634eeb241a188e44a3c87'
-#APP_SID = 'APabe7650f654fc34655fc81ae71caa3ff'
-APP_SID = 'AP16406d3d5e0e48e6d07553f7a72172dd'
+#ACCOUNT_SID = 'AC399ea9c308d1cc32573baac7336d0754' # Trial account
+ACCOUNT_SID = 'ACe56a1fe769fa2daf2cd4940de8ec00e3' # Dev account
+#AUTH_TOKEN = '3b4a61f0def634eeb241a188e44a3c87' # Trial account
+AUTH_TOKEN = 'a8e80c63c1df7ca067ea727f3c6db7c8' # Dev account
+#APP_SID = 'APabe7650f654fc34655fc81ae71caa3ff' # Default magic number
+#APP_SID = 'AP16406d3d5e0e48e6d07553f7a72172dd' # Trial account
+APP_SID = 'AP92f6044c0f27931385c00c5cdaedb799' # Dev account
+
 #CALLER_ID = '+16509222315'
 CALLER_ID = '+16506785534'
 DEFAULT_NUMBER = '+16509222315'
