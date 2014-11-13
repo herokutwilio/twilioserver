@@ -58,6 +58,7 @@ def call():
 #    resp.dial(to, callerId=CALLER_ID)
     resp.dial(number=CALLER_ID)
   result = str(resp)
+  print result
   return result
 
 if __name__ == "__main__":
