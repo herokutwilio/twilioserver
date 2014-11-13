@@ -7,7 +7,8 @@ AUTH_TOKEN = '3b4a61f0def634eeb241a188e44a3c87'
 #APP_SID = 'APabe7650f654fc34655fc81ae71caa3ff'
 APP_SID = 'AP16406d3d5e0e48e6d07553f7a72172dd'
 #CALLER_ID = '+16509222315'
-CALLER_ID = '6506785534'
+CALLER_ID = '+16506785534'
+DEFAULT_NUMBER = '+16509222315'
 CLIENT = 'jenny'
 
 app = Flask(__name__)
@@ -56,7 +57,7 @@ def call():
     # client -> PSTN
     print 3
 #    resp.dial(to, callerId=CALLER_ID)
-    resp.dial(number=CALLER_ID)
+    resp.dial(number=DEFAULT_NUMBER, callerId=CALLER_ID)
   result = str(resp)
   print result
   return result
