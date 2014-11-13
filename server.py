@@ -40,12 +40,15 @@ def call():
   to = request.values.get('To')
   if not from_client:
     # PSTN -> client
+    print 1
     resp.dial(callerId=from_value).client(CLIENT)
   elif to.startswith("client:"):
     # client -> client
+    print 2
     resp.dial(callerId=from_value).client(to[7:])
   else:
     # client -> PSTN
+    print 3
     resp.dial(to, callerId=CALLER_ID)
   return str(resp)
 
