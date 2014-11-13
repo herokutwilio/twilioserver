@@ -7,7 +7,7 @@ AUTH_TOKEN = '3b4a61f0def634eeb241a188e44a3c87'
 #APP_SID = 'APabe7650f654fc34655fc81ae71caa3ff'
 APP_SID = 'AP16406d3d5e0e48e6d07553f7a72172dd'
 #CALLER_ID = '+16509222315'
-CALLER_ID = '+16506785534'
+CALLER_ID = '6506785534'
 CLIENT = 'jenny'
 
 app = Flask(__name__)
@@ -28,7 +28,9 @@ def token():
     capability.allow_client_incoming(client)
 
   # This returns a token to use with Twilio based on the account and capabilities defined above
-  return capability.generate()
+  result = capability.generate()
+  print result
+  return result
 
 @app.route('/call', methods=['GET', 'POST'])
 def call():
@@ -55,7 +57,8 @@ def call():
     print 3
 #    resp.dial(to, callerId=CALLER_ID)
     resp.dial(number=CALLER_ID)
-  return str(resp)
+  result = str(resp)
+  return result
 
 if __name__ == "__main__":
   app.run(debug=True)
